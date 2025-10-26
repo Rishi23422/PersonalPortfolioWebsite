@@ -171,16 +171,203 @@
       .card:hover {
         transform: translateY(-5px);
       }
+
+      #tech-stack {
+        text-align: center;
+        padding: 60px 0;
+        background: #001f3f;
+        color: white;
+      }
+
+      .section-title {
+        font-size: 2rem;
+        margin-bottom: 30px;
+        color: #ffcc00;
+      }
+
+      .skills-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+      }
+
+      .skill-card {
+        background: rgba(255, 255, 255, 0.08);
+        width: 120px;
+        height: 120px;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 12px;
+        transition: 0.3s ease-in-out;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .skill-card img {
+        width: 45px;
+        margin-bottom: 10px;
+      }
+
+      .skill-card:hover {
+        transform: translateY(-8px);
+        background: rgba(255, 255, 255, 0.2);
+        cursor: pointer;
+      }
+
+      #contact {
+        text-align: center;
+        padding: 60px 0;
+        background: #001f3f;
+        color: white;
+      }
+
+      #myProj {
+        text-align: center;
+        padding: 70px 20px;
+        background: #000a18;
+        color: white;
+      }
+
+      .section-title {
+        font-size: 2rem;
+        margin-bottom: 30px;
+        color: #ffcc00;
+      }
+
+      .projects-container {
+        display: flex;
+        gap: 25px;
+        justify-content: center;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding-bottom: 10px;
+      }
+
+      .project-card {
+        min-width: 260px;
+        background: rgba(255, 255, 255, 0.09);
+        backdrop-filter: blur(6px);
+        border-radius: 16px;
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        transition: 0.3s ease-in-out;
+      }
+
+      .project-card:hover {
+        transform: translateY(-10px);
+        background: rgba(255, 255, 255, 0.25);
+        cursor: pointer;
+      }
+
+      .project-card img {
+        width: 100%;
+        height: 200px;
+        border-radius: 12px;
+        object-fit: cover;
+        margin-bottom: 10px;
+      }
+
+      .project-info h3 {
+        font-size: 1.1rem;
+        margin: 6px 0;
+        font-weight: bold;
+      }
+
+      .project-info p {
+        font-size: 0.9rem;
+        color: #d2d2d2;
+      }
+
+      #myExp {
+        text-align: center;
+        padding: 70px 20px;
+        background: #001020;
+        color: white;
+      }
+
+      .timeline {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        max-width: 750px;
+        margin: 0 auto;
+        position: relative;
+      }
+
+      .timeline::before {
+        content: "";
+        position: absolute;
+        width: 4px;
+        background: #ffcc00;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0.4;
+      }
+
+      .experience-card {
+        background: rgba(255, 255, 255, 0.08);
+        border-radius: 16px;
+        padding: 20px;
+        text-align: left;
+        width: 85%;
+        backdrop-filter: blur(6px);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        transition: 0.3s ease-in-out;
+        position: relative;
+      }
+
+      .experience-card:hover {
+        transform: translateY(-8px);
+      }
+
+      .experience-card:nth-child(odd) {
+        align-self: flex-start;
+      }
+
+      .experience-card:nth-child(even) {
+        align-self: flex-end;
+      }
+
+      .experience-card h3 {
+        color: #ffcc00;
+        margin-bottom: 5px;
+      }
+
+      .role {
+        font-weight: bold;
+        font-size: 1rem;
+      }
+
+      .date {
+        font-size: 0.85rem;
+        margin-bottom: 10px;
+        color: #d4d4d4;
+      }
+
+      .experience-card ul {
+        padding-left: 20px;
+      }
+
+      .experience-card ul li {
+        margin-bottom: 5px;
+        font-size: 0.9rem;
+        color: #e8e8e8;
+      }
     </style>
   </head>
 
   <body>
     <nav>
       <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#experience">Experience</a>
+      <a href="#tech-stack">Tech-Stack</a>
+      <a href="#myProj">Projects</a>
+      <a href="#myExp">Experience</a>
       <a href="#education">Education</a>
-      <a href="achievements">Achievements</a>
+      <a href="#achievements">Achievements</a>
       <a href="#contact">Contact</a>
     </nav>
 
@@ -222,127 +409,132 @@
       </p>
     </section>
 
-    <!-- Skills Section -->
-    <section class="section" id="skills">
-      <h2>Tech Stack</h2>
-      <div class="skills">
-        <span class="skill-tag"><i class="fa-brands fa-java"></i>Java</span>
-        <span class="skill-tag">
-          <svg
-            role="img"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-            style="width: 15px; height: 15px"
-          >
-            <title>Selenium</title>
-            <path
-              fill="#4CAF50"
-              d="M23.174 3.468l-7.416 8.322a.228.228 0 0 1-.33 0l-3.786-3.9a.228.228 0 0 1 0-.282L12.872 6a.228.228 0 0 1 .366 0l2.106 2.346a.228.228 0 0 0 .342 0l5.94-8.094A.162.162 0 0 0 21.5 0H.716a.174.174 0 0 0-.174.174v23.652A.174.174 0 0 0 .716 24h22.566a.174.174 0 0 0 .174-.174V3.6a.162.162 0 0 0-.282-.132zM6.932 21.366a5.706 5.706 0 0 1-4.05-1.44.222.222 0 0 1 0-.288l.882-1.236a.222.222 0 0 1 .33-.036 4.338 4.338 0 0 0 2.964 1.158c1.158 0 1.722-.534 1.722-1.098 0-1.752-5.7-.552-5.7-4.278 0-1.65 1.428-3 3.756-3a5.568 5.568 0 0 1 3.708 1.242.222.222 0 0 1 0 .3l-.906 1.2a.222.222 0 0 1-.318.036 4.29 4.29 0 0 0-2.706-.936c-.906 0-1.41.402-1.41.996 0 1.572 5.688.522 5.688 4.2.006 1.812-1.284 3.18-3.96 3.18zm12.438-3.432a.192.192 0 0 1-.192.192h-5.202a.06.06 0 0 0-.06.066 1.986 1.986 0 0 0 2.106 1.638 3.264 3.264 0 0 0 1.8-.6.192.192 0 0 1 .276.042l.636.93a.198.198 0 0 1-.042.264 4.71 4.71 0 0 1-2.892.9 3.726 3.726 0 0 1-3.93-3.87 3.744 3.744 0 0 1 3.81-3.852c2.196 0 3.684 1.644 3.684 4.05zm-3.684-2.748a1.758 1.758 0 0 0-1.8 1.56.06.06 0 0 0 .06.066h3.492a.06.06 0 0 0 .06-.066 1.698 1.698 0 0 0-1.812-1.56Z"
-            />
-          </svg>
-          Selenium</span
-        >
-        <span class="skill-tag">
-          <svg width="55px" height="20px" xmlns="http://www.w3.org/2000/svg">
-            <text x="0" y="15" font-family="Arial, sans-serif" font-size="14">
-              <tspan fill="white">Test</tspan>
-              <tspan fill="red">N</tspan>
-              <tspan fill="gold">G</tspan>
-            </text>
-          </svg>
-        </span>
-        <span class="skill-tag">
-          <object
-            type="image/svg+xml"
-            data="./svg/maven.svg"
-            width="100px"
-            height="40px"
-          >
-            Maven Logo
-          </object>
-        </span>
-        <span class="skill-tag">Rest Assured</span>
-        <span class="skill-tag">PostgreSQL</span>
-        <span class="skill-tag">Camunda</span>
-        <span class="skill-tag">Git</span>
-        <span class="skill-tag">CI/CD</span>
+    <!-- Tech Stack Section -->
+    <section id="tech-stack">
+      <h2 class="section-title">Tech Stack</h2>
+      <div class="skills-container">
+        <div class="skill-card">
+          <img src="./images/techStack/java.png" alt="Java" />
+          <span>Java</span>
+        </div>
+        <div class="skill-card">
+          <img src="./images/techStack/selenium.png" alt="Selenium" />
+          <span>Selenium</span>
+        </div>
+        <div class="skill-card">
+          <img src="./images/techStack/testng.png" alt="TestNG" />
+          <span>TestNG</span>
+        </div>
+        <div class="skill-card">
+          <img src="./images/techStack/maven.png" alt="Maven" />
+          <span>Maven</span>
+        </div>
+        <div class="skill-card">
+          <img src="./images/techStack/restassured.png" alt="RestAssured" />
+          <span>Rest Assured</span>
+        </div>
+        <div class="skill-card">
+          <img src="./images/techStack/postgres.png" alt="PostgreSQL" />
+          <span>PostgreSQL</span>
+        </div>
+        <div class="skill-card">
+          <img src="./images/techStack/camunda.png" alt="Camunda" />
+          <span>Camunda</span>
+        </div>
+        <div class="skill-card">
+          <img src="./images/techStack/git.png" alt="Git" />
+          <span>Git</span>
+        </div>
+        <div class="skill-card">
+          <img src="./images/techStack/cicd.png" alt="CI/CD" />
+          <span>CI/CD</span>
+        </div>
       </div>
     </section>
 
     <!-- Projects Section -->
-    <section class="section" id="projects">
-      <h2>Projects</h2>
-      <p>
-        Here are some of the impactful projects I've built and contributed to:
-      </p>
-
-      <div class="card">
-        <strong>Hybrid Automation Framework (Selenium + Java + TestNG)</strong>
-        <p>
-          Designed a reusable data-driven automation framework structured for
-          in-sprint automation and long-term regression execution
-        </p>
-        <img
-          width="300px"
-          height="300px"
-          src="./images/frameworkImage.png"
-          alt="Automation Framework"
-        />
-      </div>
-      <div class="card">
-        <strong>AI-Driven QA Automation (Amazon Bedrock + Lambda)</strong>
-        <p>
-          Amazon Bedrock enabled automated test case generation, bug report
-          analysis, andAI-powered test result interpretation.
-        </p>
-        <img
-          width="300px"
-          height="300px"
-          src="./images/aiArmImage.jpg"
-          alt="AI Driven"
-        />
-      </div>
-      <div class="card">
-        <strong>Playwright Automation Framework</strong>
-        <p>
-          Implemented modern UI automation with Playwright for fast, stable and
-          cross-browser validation
-        </p>
-        <img
-          width="300px"
-          height="300px"
-          src="./images/playwrightImage.png"
-          alt="Playwright Automation"
-        />
+    <section id="myProj">
+      <h2 class="section-title">Projects</h2>
+      <div class="projects-container">
+        <div class="project-card">
+          <img
+            src="./images/myProjects/hybridAutomationFramework.png"
+            alt="Project Image"
+          />
+          <div class="project-info">
+            <h3>Hybrid Automation Framework (Selenium + Java + TestNG)</h3>
+            <p>
+              Designed a reusable data-driven automation framework structured
+              for in-sprint automation and long-term regression execution
+            </p>
+          </div>
+        </div>
+        <div class="project-card">
+          <img
+            src="./images/myProjects/aiDrivenAutomation.png"
+            alt="Project Image"
+          />
+          <div class="project-info">
+            <h3>AI-Driven QA Automation (Amazon Bedrock + Lambda)</h3>
+            <p>
+              Amazon Bedrock enabled automated test case generation, bug report
+              analysis, andAI-powered test result interpretation.
+            </p>
+          </div>
+        </div>
+        <div class="project-card">
+          <img
+            src="./images/myProjects/playwrightAutomationFramework.png"
+            alt="Project Image"
+          />
+          <div class="project-info">
+            <h3>Playwright Automation Framework</h3>
+            <p>
+              Implemented modern UI automation with Playwright for fast, stable
+              and cross-browser validation
+            </p>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- Experience Section -->
-    <section class="section" id="experience">
-      <h2>Experience</h2>
-
-      <div class="card">
-        <strong>Cognizant - SDET | Aug 2022 - Present </strong>
-        <ul>
-          <li>
-            Started career as intern learning automation tools - Selenium, Java,
-            Maven, TestNG, SQL.
-          </li>
-          <li>
-            Project 1 - LPL Financial (Trading & Operations): Designed Test
-            Cases based on User Stories, automated InSprint features, and
-            maintained regression suites.
-          </li>
-          <li>
-            Project 2 - LPL Financial (Fee Billing): Wrote extensive SQL queries
-            for validating billing data and backend workflows.
-          </li>
-          <li>
-            Project 3 - LPL Financial (Back-Office Process Management):
-            Validated Kafka-driven workflows, CamundaBPMN processes, and UI
-            correctness.
-          </li>
-        </ul>
+    <!-- My Experience Section -->
+    <section id="myExp">
+      <h2 class="section-title">Experience</h2>
+      <div class="timeline">
+        <div class="experience-card">
+          <h3>Cognizant</h3>
+          <p class="role">SDET- Software Development Engineer in Test</p>
+          <p class="date">Aug 2022 - Present</p>
+          <ul>
+            <li>
+              Automated <strong>400+</strong> test cases using
+              <strong>Java, Selenium, RestAssured and TestNG</strong>
+            </li>
+            <li>
+              Created CI/CD Pipelines using <strong>GitHub Actions</strong>
+            </li>
+            <li>
+              Improved critical workflow automation coverage from
+              <strong>60% to 95%</strong>
+            </li>
+            <li>
+              Validated <strong>Biling workflows</strong> in LPL Financials
+              project with SQL, API & UI checks
+            </li>
+            <li>Tested <strong>Camunda BPMN & DMN based workflows</strong></li>
+          </ul>
+        </div>
+        <div class="experience-card">
+          <h3>Cognizant</h3>
+          <p class="role">Intern</p>
+          <p class="date">Jan 2022 - Jul 2022</p>
+          <ul>
+            <li>Created E2E Automation Testing Projects using Selenium Java</li>
+            <li>Learned Functional Testing & Automation basics</li>
+            <li>Manual Test Case Design & Execution</li>
+          </ul>
+        </div>
       </div>
     </section>
 
@@ -376,7 +568,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section class="section" id="contact">
+    <section id="contact">
       <h2>Contact Me</h2>
       <p>
         Let's connect! I'd love to discuss how I can contribute to your team.
@@ -395,7 +587,6 @@
           style="color: #cfa14d"
           >Book a slot</a
         >
-        (Calendly integration coming soon)
       </p>
     </section>
   </body>
